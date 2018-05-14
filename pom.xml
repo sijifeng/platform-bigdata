@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>platform-bigdata</artifactId>
+    <groupId>com.season</groupId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>bigdata tool</description>
+    <inceptionYear>2018</inceptionYear>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <modules>
+        <module>platform-common-utils</module>
+        <module>platform-common-hbase</module>
+        <module>platform-common-kafka</module>
+        <module>platform-common-core</module>
+        <module>platform-common-spark</module>
+        <module>platform-common-es</module>
+        <module>platform-common-hdfs</module>
+        <module>platform-common-thrift</module>
+        <module>platform-common-flume</module>
+        <module>platform-common-hive</module>
+        <module>platform-common-presto</module>
+        <module>platform-common-guava</module>
+        <module>platform-common-akka</module>
+        <module>platform-spark-avro</module>
+        <module>platform-common-game</module>
+    </modules>
+
+
+    <repositories>
+        <repository>
+            <id>ali repository</id>
+            <name>ali data center repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>ali pluginRepository</id>
+            <name>ali data center repository</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <target>${java.version}</target>
+                    <source>${java.version}</source>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
